@@ -38,14 +38,7 @@ namespace Serpientes_y_escaleras
 
         public int Verificar(int i)
         {
-            int j = i;
-            if (i < tablero.Length)
-                if (tablero[i] != i)
-                    return tablero[i];
-                else
-                    return tablero[i];
-            else
-                return tablero[i];
+           return tablero[i];
         }
 
     }

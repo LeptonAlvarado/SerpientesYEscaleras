@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Serpientes_y_escaleras
 {
-    class Jugador : Dado
+    class Jugador
     {
         private int _num;
         private int _pos;
@@ -27,10 +27,8 @@ namespace Serpientes_y_escaleras
             get { return _pos; }
         }
 
-        new public void Avanzar()
+        public void Avanzar(int dado)
         {
-            int dado = base.Avanzar();
-
             _pos += dado;
         }
 

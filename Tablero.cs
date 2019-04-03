@@ -12,7 +12,7 @@ namespace Serpientes_y_escaleras
 
         public Tablero()
         {
-            for(int i=1;i<101;i++)
+            for(int i=1;i<tablero.Length;i++)
             {
                 tablero[i] = i;
             }            
@@ -36,12 +36,16 @@ namespace Serpientes_y_escaleras
             tablero[95] = 60;
         }
 
-        public void Verificar(int i)
+        public int Verificar(int i)
         {
-            if(tablero[i] != i )
-            {
-                tablero[i] = i;
-            }
+            int j = i;
+            if (i < tablero.Length)
+                if (tablero[i] != i)
+                    return tablero[i];
+                else
+                    return tablero[i];
+            else
+                return tablero[i];
         }
 
     }

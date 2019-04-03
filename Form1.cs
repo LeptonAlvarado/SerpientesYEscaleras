@@ -27,9 +27,9 @@ namespace Serpientes_y_escaleras
             do
             {
                 j1.Avanzar(d1.Lanzar());
-                t1.Verificar(j1.Posicion);
+                j1.SubirBajar(t1.Verificar(j1.Posicion));
                 j2.Avanzar(d1.Lanzar());
-                t1.Verificar(j2.Posicion);
+                j2.SubirBajar(t1.Verificar(j2.Posicion));
                 txtJuego.Text += j1.ToString() + Environment.NewLine + j2.ToString() + Environment.NewLine;
             } while (j1.Posicion < 100 && j2.Posicion < 100);
 

@@ -20,14 +20,15 @@ namespace Serpientes_y_escaleras
         private void btnIniJuego_Click(object sender, EventArgs e)
         {
             Tablero t1 = new Tablero();
+            Dado d1 = new Dado();
             Jugador j1 = new Jugador(1);
             Jugador j2 = new Jugador(2);
 
             do
             {
-                j1.Avanzar();
+                j1.Avanzar(d1.Lanzar());
                 t1.Verificar(j1.Posicion);
-                j2.Avanzar();
+                j2.Avanzar(d1.Lanzar());
                 t1.Verificar(j2.Posicion);
                 txtJuego.Text += j1.ToString() + Environment.NewLine + j2.ToString() + Environment.NewLine;
             } while (j1.Posicion < 100 && j2.Posicion < 100);

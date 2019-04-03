@@ -8,7 +8,7 @@ namespace Serpientes_y_escaleras
 {
     class Tablero
     {
-        protected int[] tablero = new int [101];
+        protected int[] tablero = new int [105];
 
         public Tablero()
         {

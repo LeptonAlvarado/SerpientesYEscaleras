@@ -31,7 +31,12 @@ namespace Serpientes_y_escaleras
         {
             _pos += dado;
         }
-
+        
+        public void SubirBajar(int pos)
+        {
+            _pos = pos;
+        }
+        
         public override string ToString()
         {
             return "El jugador " + Numero.ToString() + " Se encuentra en la casilla " + Posicion.ToString();
